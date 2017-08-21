@@ -1,0 +1,21 @@
+<section>
+  <%= form_tag"/comics", method: :post, controller: 'comics', action: 'file', multipart: true do %>
+    <ul class="new-form">
+      <li>
+        <%= label_tag :name, "Comic Name:" %>
+        <%= text_area_tag :name %>
+      </li>
+      <li>
+        <%= label_tag :description, "Comic Description:" %>
+        <%= text_area_tag :description %>
+      </li>
+      <li>
+        <%= label_tag :series_image, "Series Image:" %>
+        <%= file_field_tag :series_image %>
+      </li>
+      <li>
+        <%= submit_tag "Submit" %>
+      </li>
+    </ul>
+  <% end %>
+</section>

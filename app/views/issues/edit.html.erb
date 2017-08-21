@@ -1,0 +1,43 @@
+<section>
+  <%= form_tag"/issues/#{@issue.id}", method: :patch, controller: 'issues', action: 'file', multipart: true do %>
+    <ul class="new-form">
+      <li>
+        <%= label_tag :title, "Issue title:" %>
+        <%= text_area_tag :title, @issue.title %>
+      </li>
+      <li>
+        <%= label_tag :subtitle, "Issue subtitle:" %>
+        <%= text_area_tag :subtitle, @issue.subtitle %>
+      </li>
+      <!-- this should be a drop-down since it's an enum -->
+      <li class="post-text">
+        <%= label_tag :issue_type, "Issue type:" %>
+        <%= select_tag :issue_type, options_for_select(Issue.issue_types) %>
+      </li>
+      <li class="post-text">
+        <%= label_tag :synopsis, "Synopsis:" %>
+        <%= text_area_tag :synopsis, @issue.synopsis %>
+      </li>
+      <li>
+        <%= label_tag :paypal_link, "Paypal Url:" %>
+        <%= text_area_tag :paypal_link, @issue.paypal_link %>
+      </li>
+      <li>
+        <%= label_tag :uploaded_image, "Image:" %>
+        <%= file_field_tag :uploaded_image %>
+      </li>
+      <li class="post-text">
+        <%= label_tag :image_type, "Image type:" %>
+        <%= select_tag :image_type, options_for_select(Image.image_types) %>
+      </li>
+      <!-- THIS FIELD SHOULD BE A DROPDOWN OF NUMBERS -->
+      <li class="post-text">
+        <%= label_tag :page, "Page (if any):" %>
+        <%= text_area_tag :page %>
+      </li>
+      <li>
+        <%= submit_tag "Submit" %>
+      </li>
+    </ul>
+  <% end %>
+</section>

@@ -1,0 +1,21 @@
+<section class="main-section container">
+  <div class="show-header">
+    <h1>NEWS ARCHIVE</h1>
+  </div>
+  <% @posts.each do |post| %>
+    <div class="index-cube-wrapper">
+      <div class="cube-top-left"></div>
+      <div class="cube-bottom-right"></div>
+      <div class="content-cube">
+        <h1><%= post.heading %></h1>
+        <div class="post-image">
+          <%= image_tag(post.image) %>
+        </div>
+        <div class="post-text">
+          <%= render_markdown_html(post.text) %>
+        </div>
+      </div>
+    </div>
+    <div class="vertical-spacer"></div>
+  <% end %>
+</section>

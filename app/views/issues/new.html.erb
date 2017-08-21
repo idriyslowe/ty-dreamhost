@@ -1,0 +1,61 @@
+<section>
+  <%= form_for @issue, method: :post, controller: 'issues', action: 'file', :html => { multipart: true } do |f| %>
+    <ul class="new-form">
+      <li>
+        <%= f.label :comic_id, "Comic ID:" %>
+        <%= f.collection_select :comic_id, Comic.all,:id,:name %>
+      </li>
+      <li>
+        <%= f.label :issue_type, "Issue type:" %>
+        <%= f.select :issue_type, options_for_select(Issue.issue_types) %>
+      </li>
+      <li>
+        <%= f.label :title, "Issue title:" %>
+        <%= f.text_field :title %>
+      </li>
+      <li>
+        <%= f.label :subtitle, "Issue subtitle:" %>
+        <%= f.text_field :subtitle %>
+      </li>
+      <li>
+        <%= f.label :details, "Details:" %>
+        <%= f.text_field :details %>
+      </li>
+      <li>
+        <%= f.label :year, "Year:" %>
+        <%= f.text_field :year %>
+      </li>
+      <li>
+        <%= f.label :price, "Price:" %>
+        <%= f.text_field :price %>
+      </li>
+      <li class="post-text">
+        <%= f.label :synopsis, "Synopsis:" %>
+        <%= f.text_field :synopsis %>
+      </li>
+      <li>
+        <%= f.label :paypal_link, "Paypal Url:" %>
+        <%= f.text_field :paypal_link %>
+      </li>
+      <%= f.fields_for :images, :html => { multipart: true } do |images_form| %>
+        <li>
+          <%= images_form.label :uploaded_image, "Image:" %>
+          <%= images_form.file_field :uploaded_image %>
+        </li>
+        <!-- THIS IS A DROP DOWN SINCE IT'S AN ENUM -->
+        <li class="post-text">
+          <%= images_form.label :image_type, "Image type:" %>
+          <%= images_form.select :image_type, options_for_select(Image.image_types) %>
+        </li>
+        <!-- THIS FIELD SHOULD BE A DROPDOWN OF NUMBERS -->
+        <li class="post-text">
+          <%= images_form.label :page, "Page (if any):" %>
+          <%= images_form.text_field :page %>
+        </li>
+        <li>
+          <%= submit_tag "Submit" %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+</section>

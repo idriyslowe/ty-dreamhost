@@ -1,0 +1,21 @@
+<section class="main-section container-fluid">
+  <div class="show-header">
+    <h1><%= @comic.upcase_name %></h1>
+  </div>
+
+  <div class="comic-description">
+    <p><%= render_markdown_html(@comic.description) %></p>
+  </div>
+
+  <div class="comics-index-span row">
+    <% @comic.issues.each do |issue| %>
+      <div class="comics-well col-lg-6" data-toggle="modal" data-target="#myModal-<%=issue.id%>">
+        <%= link_to "/issues/#{issue.id}" do %>
+          <p class="click-for-preview">Click For Preview</p>
+          <%= image_tag( issue.cover_image.uploaded_image ) %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+</section>

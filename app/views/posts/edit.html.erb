@@ -1,0 +1,17 @@
+<section>
+  <%= form_tag"/posts", method: :post do %>
+    <ul class="new-post-form">
+      <li>
+        <%= label_tag :heading, "Post Heading:" %>
+        <%= text_area_tag :heading %>
+      </li>
+      <li class="post-text">
+        <%= label_tag :text, "Post Text:" %>
+        <%= text_area_tag :text %>
+      </li>
+      <li>
+        <%= submit_tag "Submit" %>
+      </li>
+    </ul>
+  <% end %>
+</section>

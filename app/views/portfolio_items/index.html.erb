@@ -1,0 +1,10 @@
+<section class="main-section container-fluid">
+  <div class="comics-shop-span row">
+    <h1>PORTFOLIO</h1>
+    <% @portfolio_items.each do |item| %>
+      <div class="portfolio-well col-lg-12">
+        <%= image_tag( "#{item.image}" ) %>
+      </div>
+    <% end %>
+  </div>
+</section>

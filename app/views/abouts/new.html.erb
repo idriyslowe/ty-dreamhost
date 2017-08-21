@@ -1,0 +1,17 @@
+<section>
+  <%= form_tag"/abouts", method: :post do %>
+    <ul class="new-form">
+      <li>
+        <%= label_tag :image, "Image:" %>
+        <%= file_field_tag :image %>
+      </li>
+      <li class="post-text">
+        <%= label_tag :text, "Post Text:" %>
+        <%= text_area_tag :text %>
+      </li>
+      <li>
+        <%= submit_tag "Submit" %>
+      </li>
+    </ul>
+  <% end %>
+</section>

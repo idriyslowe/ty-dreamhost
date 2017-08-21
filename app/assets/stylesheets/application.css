@@ -1,0 +1,458 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require bootstrap.min
+ *= require_self
+ */
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../assets/glyphicons-halflings-regular.eot');
+  src: url('../assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+  url('../assets/glyphicons-halflings-regular.woff') format('woff'),
+  url('../assets/glyphicons-halflings-regular.ttf') format('truetype'),
+  url('../assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+ :root {
+  --main-bg-color: white;
+  --cube-left-color: rgb(69, 68, 68);
+}
+
+html, body {
+  height: auto;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  padding-bottom: 5%;
+  font-family: Helvetica;
+}
+
+a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+a:hover {
+  color: #C4C4C4 !important;
+  text-decoration: none;
+}
+
+button {
+  text-align: center;
+  margin-left: 45%;
+  margin-right: 45%;
+  margin-top: 2%;
+}
+
+footer {
+  text-align: center;
+  height: 5%;
+  position: relative;
+  font-size: 1.3em;
+}
+
+footer p {
+  display: block
+  padding-left: 15%;
+  padding-bottom: 3%;
+}
+
+form {
+  margin-top: 3%;
+}
+
+section {
+  margin: 5%;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+section:after {
+  content: "";
+  display: block;
+}
+
+image {
+  max-width: 100%;
+}
+
+.main-section {
+  text-align: center;
+  padding-right: 5%;
+  padding-left: 5%;
+}
+
+.comics-index-span {
+  margin-bottom: 5%;
+  position: relative;
+  padding-top: 5%;
+}
+
+.comics-shop-span {
+  margin-bottom: 5%;
+  margin-left: 0;
+  margin-right: 0;
+  position: relative;
+}
+
+.clearfooter {
+  height: 5%;
+  clear: both;
+}
+
+.header-wrapper {
+  height: 70%;
+  text-align: center;
+  margin: 3%;
+  font-size: 15px;
+  overflow: hidden;
+}
+
+.home-hover-buttons:hover .header-image {
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.home-hover-buttons {
+  text-align: center;
+  overflow: hidden;
+  padding-bottom: 0;
+}
+
+.header-image {
+  border: 3px solid black;
+  display: inline-block;
+  z-index: 2;
+  max-height: 390px;
+  left: 0;
+  display:inline-block;
+}
+
+.header-wrapper div {
+  display: inline-block;
+}
+
+.header-wrapper div h1, .header-wrapper div p {
+  border: 3px solid black;
+  padding: 6% 0 6% 0;
+  margin: 2% 0 3% 0;
+}
+
+.home-button {
+  display: inline-block;
+  background-color: white;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  padding-left: 30%;
+  padding-top: 40%;
+  font-size: 45px;
+}
+
+#about {
+  padding: 5%;
+  text-align: justify;
+}
+
+.vertical-spacer {
+  height: 50px;
+  background-color: var(--main-bg-color);
+  margin: 0;
+}
+
+.comic-description {
+  text-align: center;
+  margin-right: 7%;
+  margin-left: 7%;
+  font-size: 15px;
+}
+
+.comic-description h2 {
+  padding: 1%;
+  margin-bottom: 5%;
+  font-size: 20px;
+}
+.portfolio-well {
+  padding: 0%;
+  margin-bottom: 10%;
+}
+
+.portfolio-well img {
+  max-width: 1100px;
+}
+
+.comics-well {
+  padding: 0%;
+  margin-bottom: 10%;
+  overflow: hidden;
+  text-align: center;
+}
+
+.comics-well:hover .click-for-preview {
+  visibility: visible;
+}
+
+.comics-well:hover .click-for-details {
+  visibility: visible;
+}
+
+.comics-well img {
+  height: 500px;
+}
+
+.comics-well:nth-last-child(1):nth-child(odd) {
+  display:inline-block;
+  text-align:center;
+  padding-left: 50%
+  padding-right: 50%;
+  width: 100%;
+}
+
+.comics-well:nth-last-child(1):nth-child(odd):hover .click-for-preview {
+  visibility: visible;
+}
+.comics-well:nth-last-child(1):nth-child(odd) .click-for-preview {
+  visibility: hidden;
+  color: black;
+  opacity: 0.7;
+  position: absolute;
+  right: 39.5%;
+  top: 40%;
+  font-size: 2em;
+}
+
+.comics-well:nth-last-child(1):nth-child(odd):hover .click-for-details {
+  visibility: visible;
+}
+.comics-well:nth-last-child(1):nth-child(odd) .click-for-details {
+  visibility: hidden;
+  color: black;
+  opacity: 0.7;
+  position: absolute;
+  right: 23%;
+  top: 0%;
+  font-size: 2em;
+}
+
+.click-for-preview {
+  visibility: hidden;
+  color: black;
+  opacity: 0.7;
+  position: absolute;
+  right: 33%;
+  top: 40%;
+  font-size: 2em;
+}
+
+.click-for-details {
+  visibility: hidden;
+  color: white;
+  background-color: black;
+  opacity: 0.5;
+  position: absolute;
+  padding-top: 20%;
+  font-size: 1.5em;
+  width: 100%;
+  height: 91.2%;
+}
+
+.comics-modal {
+  text-align: center;
+}
+
+.comics-modal img {
+  height: 700px;
+}
+
+.issues-index-wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
+  margin-bottom: 5%;
+}
+
+.issues-main-image {
+  display: inline;
+  width: 30%;
+  margin-right: 4%;
+}
+
+.issues-index {
+  width: 55%;
+  display: inline-block;
+}
+
+.issues-index img {
+  padding: 1%;
+  width: 26%;
+}
+
+.issues-nav {
+  display: block;
+  text-align: center;
+  margin-left: -45%;
+  margin-right: -45%;
+}
+
+.issues-nav img {
+  padding: 1%;
+  display: inline;
+  width: 15%;
+  left: 0;
+  right: 0;
+}
+
+.opacity-off {
+  opacity: 0;
+}
+
+.slideshow-thumbnails img {
+  margin-right: 0;
+}
+
+.page-header {
+  font-size: 40px;
+  text-align: center;
+}
+
+.index-cube-wrapper {
+  width: 100%;
+  background-color: white;
+  padding: 0;
+  position: relative;
+}
+
+.index-link {
+  text-align: center;
+}
+
+.cube-top-left {
+  background-color: var(--main-bg-color);
+  float: left;
+  border-left: 90px solid transparent;
+  border-bottom: 70px solid var(--cube-left-color);
+}
+
+.cube-bottom-right {
+  background-color: var(--main-bg-color);
+  bottom: 0;
+  right: 0;
+  border-left: 90px solid black;
+  border-bottom: 70px solid transparent;
+  position: absolute;
+}
+
+.content-cube {
+  background-color: white;
+  padding: 1% 3% 3% 3%;
+  border-right: 3px solid black;
+  border-top: 3px solid black;
+  border-bottom: 70px solid black;
+  border-left: 90px solid var(--cube-left-color);
+  min-height: 500px;
+}
+
+.post-text {
+  margin-left: 20%;
+  margin-top: 3%;
+  text-align:justify
+}
+
+.show-header h1 {
+  margin-top: 0;
+  margin-bottom: 2%;
+  font-size: 45px;
+  text-align: center;
+}
+.show-header h5 {
+  margin-bottom: 2%;
+}
+
+.series-image {
+  text-align: center;
+  overflow: hidden;
+}
+
+.series-image img {
+  opacity: 0.7;
+  height: 250px;
+}
+
+.content-cube h1 {
+  padding-left: 0;
+  font-size: 30px;
+}
+
+/*ALSO GETTING STYLES FROM POST-IMAGE. HOW TO CHECK FOR IMAGE BEFORE DOING ALL OF THIS?*/
+.content-cube img {
+  display: inline;
+  float: left;
+  height: 300px;
+  margin-right: 2%;
+}
+.content-cube p {
+  display: inline;
+  width: 90%;
+}
+.new-form {
+  list-style: none;
+}
+
+.new-form textarea, input[type=text] {
+  width: 90%;
+  height: auto;
+  min-height: 70px;
+  margin: 2%;
+  border-style: solid;
+  border-width: 3px;
+}
+.post-text textarea, input[type=text] {
+  min-height: 500px;
+}
+.shop-image img {
+  padding: 3%;
+}
+
+.modal-body img {
+  height: 650px;
+}
+
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  text-align: center;
+  display: block;
+  width: 100%;
+  padding-left: 30%;
+  padding-right: 30%;
+}
+
+.carousel-caption h4 {
+  font-size: 25px;
+  color: black;
+}
+.bottom-nav {
+  height: 50px;
+  text-align: center;
+  margin-bottom: 3%;
+}
+.bottom-nav h3 {
+  width: 50%;
+  display: inline;
+}

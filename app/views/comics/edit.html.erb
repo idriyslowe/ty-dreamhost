@@ -1,0 +1,12 @@
+<%= form_tag"/comics", method: :post, controller: 'comics', action: 'file', multipart: true do %>
+  <%= label_tag :name, "Comic Name:" %>
+  <%= text_field_tag :name, "#{@comic.name}" %>
+
+  <%= label_tag :description, "Comic Description:" %>
+  <%= text_field_tag :description, "#{@comic.description}" %>
+
+  <%= label_tag :series_image, "Series Image Url:" %>
+  <%= file_field_tag :series_image %>
+
+  <%= submit_tag "Submit" %>
+<% end %>
