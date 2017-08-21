@@ -2,13 +2,13 @@
 lock "3.8.0"
 
 set :application, "my_app_name"
-set :repo_url, "git@example.com:me/my_repo.git"
+set :repo_url, "https://github.com/idriyslowe/ty-dreamhost.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-# set :deploy_to, "/var/www/my_app_name"
+set :deploy_to, "/var/www/my_app_name"
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
@@ -18,7 +18,7 @@ set :repo_url, "git@example.com:me/my_repo.git"
 # set :format_options, command_output: true, log_file: "log/capistrano.log", color: :auto, truncate: :auto
 
 # Default value for :pty is false
-# set :pty, true
+set :pty, true
 
 # Default value for :linked_files is []
 # append :linked_files, "config/database.yml", "config/secrets.yml"
@@ -30,4 +30,12 @@ set :repo_url, "git@example.com:me/my_repo.git"
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 
 # Default value for keep_releases is 5
-# set :keep_releases, 5
+set :keep_releases, 3
+
+set :scm, :git
+set :branch, "master"
+set :user, "deploy"
+set :rails_env, "production"
+set :deploy_via, :copy
+set :ssh_options, { :forward_agent => true }
+server "www.example.com", :app, :web, :db, :primary => true
