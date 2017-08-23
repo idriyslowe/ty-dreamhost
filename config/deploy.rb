@@ -33,7 +33,6 @@ set :pty, true
 # Default value for keep_releases is 5
 set :keep_releases, 3
 
-set :scm, :git
 set :branch, "master"
 set :rails_env, "production"
 set :deploy_via, :remote_cache
