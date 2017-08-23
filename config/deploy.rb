@@ -1,14 +1,15 @@
 # config valid only for current version of Capistrano
 lock "3.8.0"
 
-set :application, "my_app_name"
+set :application, "tyrellcannon.com"
 set :repo_url, "https://github.com/idriyslowe/ty-dreamhost.git"
+set :user, 'idriysthekiller'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, "/var/www/my_app_name"
+set :deploy_to, "/var/www/tyrellcannon.com"
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
@@ -34,8 +35,7 @@ set :keep_releases, 3
 
 set :scm, :git
 set :branch, "master"
-set :user, "deploy"
 set :rails_env, "production"
-set :deploy_via, :copy
+set :deploy_via, :remote_cache
 set :ssh_options, { :forward_agent => true }
-server "www.example.com", :app, :web, :db, :primary => true
+server "64.90.48.184", :app, :web, :db, :primary => true
