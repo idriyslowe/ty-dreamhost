@@ -38,4 +38,4 @@ set :branch, "master"
 set :rails_env, "production"
 set :deploy_via, :remote_cache
 set :ssh_options, { :forward_agent => true }
-server "64.90.48.184", :app, :web, :db, :primary => true
+server "64.90.48.184",roles: %w(app web db), :primary => true
