@@ -25,7 +25,7 @@ set :pty, true
 # append :linked_files, "config/database.yml", "config/secrets.yml"
 
 # Default value for linked_dirs is []
-# append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
+append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
@@ -38,3 +38,4 @@ set :rails_env, "production"
 set :deploy_via, :remote_cache
 set :ssh_options, { :forward_agent => true }
 server "64.90.48.184",roles: %w(app web db), :primary => true
+set :conditionally_migrate, true
