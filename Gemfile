@@ -25,7 +25,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'seed_dump'
 gem 'redcarpet'
 gem 'carrierwave', '~> 1.0'
-gem 'bundler', '1.14.6'
+gem 'bundler', '1.15.4'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
