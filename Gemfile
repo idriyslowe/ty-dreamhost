@@ -41,6 +41,7 @@ group :development, :test do
   gem 'byebug'
   gem 'capistrano', '~> 3.8.2'
   gem 'capistrano-rails', '~> 1.3'
+  # gem 'capistrano-rvm'
 end
 
 group :development do
