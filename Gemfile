@@ -38,7 +38,7 @@ gem 'carrierwave', '~> 1.0'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  gem 'capistrano', '~> 3.9.0'
+  gem 'capistrano', '~> 3.8.2'
   gem 'capistrano-rails', '~> 1.3'
 end
 

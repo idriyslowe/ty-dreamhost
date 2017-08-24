@@ -64,7 +64,7 @@ footer {
 }
 
 footer p {
-  display: block
+  display: block;
   padding-left: 15%;
   padding-bottom: 3%;
 }
@@ -216,7 +216,7 @@ image {
 .comics-well:nth-last-child(1):nth-child(odd) {
   display:inline-block;
   text-align:center;
-  padding-left: 50%
+  padding-left: 50%;
   padding-right: 50%;
   width: 100%;
 }
