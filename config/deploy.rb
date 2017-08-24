@@ -1,7 +1,7 @@
 # config valid only for current version of Capistrano
 lock "3.8.2"
 
-set :application, "tyrellcannon.com"
+set :application, "ty-dreamhost"
 set :repo_url, "https://github.com/idriyslowe/ty-dreamhost.git"
 
 # Default branch is :master
@@ -38,3 +38,14 @@ set :rails_env, "production"
 # server "ty_dreamhost", roles: %w(app web db), :primary => true
 set :conditionally_migrate, true
 # set :default_env, { rvm_bin_path: '~/.rvm/bin' }
+
+# namespace :deploy do
+
+#   desc "expand the gems"
+#   task :gems, :roles => :web, :except => { :no_release => true } do
+#     run "cd #{current_path}; #{shared_path}/bin/bundle unlock"
+#     run "cd #{current_path}; nice -19 #{shared_path}/bin/bundle install vendor/" # nice -19 is very important otherwise DH will kill the process!
+#     run "cd #{current_path}; #{shared_path}/bin/bundle lock"
+#   end
+
+# end
