@@ -52,7 +52,7 @@ end
 
 group :production do
   # For heroku static asset serving in < Rails 5 versions
-  gem 'rails_12factor', group: :production
+  # gem 'rails_12factor', group: :production
   gem 'pg'
 end
 
