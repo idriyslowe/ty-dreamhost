@@ -1,11 +1,11 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.first(10)
+    @posts = Post.order(created_at: :desc).first(10)
   end
 
   def archive
-    @posts = Post.all
+    @posts = Post.all.order(created_at: :desc)
   end
 
   def show

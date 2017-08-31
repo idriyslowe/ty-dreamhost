@@ -9,7 +9,7 @@
 
   <div class="comics-index-span row">
     <% @comic.issues.each do |issue| %>
-      <div class="comics-well col-lg-6" data-toggle="modal" data-target="#myModal-<%=issue.id%>">
+      <div class="comics-well col-md-6 col-sm-12 col-xs-12" data-toggle="modal" data-target="#myModal-<%=issue.id%>">
         <%= link_to "/issues/#{issue.id}" do %>
           <p class="click-for-preview">Click For Preview</p>
           <%= image_tag( issue.cover_image.uploaded_image ) %>
