@@ -21,13 +21,15 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
-# gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'seed_dump'
 gem 'redcarpet'
 gem 'carrierwave', '~> 1.0'
+gem 'railties'
+gem 'rails_admin', '~> 1.2'
+gem 'devise'
 gem 'bundler', '1.15.4'
 gem 'therubyracer', :platform => :ruby
-# gem 'therubyracer', platform: :ruby
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -41,9 +43,6 @@ gem 'therubyracer', :platform => :ruby
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  gem 'capistrano', '~> 3.8.2'
-  gem 'capistrano-rails', '~> 1.3'
-  # gem 'capistrano-rvm'
 end
 
 group :development do
@@ -52,13 +51,14 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'capistrano'
 end
 
-# group :production do
-#   # For heroku static asset serving in < Rails 5 versions
-#   # gem 'rails_12factor', group: :production
-#   gem 'pg'
-# end
+group :production do
+  # For heroku static asset serving in < Rails 5 versions
+  # gem 'rails_12factor', group: :production
+  gem 'pg'
+end
 
 # ruby "2.2.3"
 

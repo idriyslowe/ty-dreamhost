@@ -5,7 +5,7 @@
       <div class="cube-top-left"></div>
       <div class="cube-bottom-right"></div>
       <div class="content-cube">
-        <h1><%= post.heading %></h1>
+        <h1><%= render_markdown_html(post.heading) %></h1>
         <div class="post-image">
           <%= image_tag(post.image) %>
         </div>

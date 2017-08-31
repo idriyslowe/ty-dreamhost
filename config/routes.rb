@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-  root 'posts#index'
-
-# TODO: REFACTOR WITH RESOURCES. COMICS IS READY + SHOP, POSTS IS READY + ARCHIVE, ISSUES IS READY
+  devise_for :authors
+  mount RailsAdmin::Engine => '/tyrelladmin', as: 'rails_admin'
+  root to: 'posts#index'
 
   get '/posts/archive' => 'posts#archive'
   resources :posts, only: [:index]
