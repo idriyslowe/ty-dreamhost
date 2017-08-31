@@ -118,7 +118,6 @@ GEM
     nokogiri (1.6.8.1)
       mini_portile2 (~> 2.1.0)
     orm_adapter (0.5.0)
-    pg (0.19.0)
     rack (1.6.4)
     rack-pjax (1.0.0)
       nokogiri (~> 1.5)
@@ -230,7 +229,6 @@ DEPENDENCIES
   devise
   jbuilder (~> 2.0)
   jquery-rails
-  pg
   rails (= 4.2.4)
   rails_admin (~> 1.2)
   railties
