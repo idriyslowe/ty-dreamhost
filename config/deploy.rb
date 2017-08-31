@@ -37,6 +37,7 @@ set :rails_env, "production"
 # set :ssh_options, { :forward_agent => true }
 # server "ty_dreamhost", roles: %w(app web db), :primary => true
 set :conditionally_migrate, true
+set :bundle_gemfile,  "Gemfile"
 # set :default_env, { rvm_bin_path: '~/.rvm/bin' }
 
 # namespace :deploy do

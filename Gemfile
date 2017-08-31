@@ -55,9 +55,9 @@ group :development do
 end
 
 # group :production do
-  # For heroku static asset serving in < Rails 5 versions
-  # gem 'rails_12factor', group: :production
-  # gem 'pg'
+#   # For heroku static asset serving in < Rails 5 versions
+#   # gem 'rails_12factor', group: :production
+#   gem 'pg'
 # end
 
 # ruby "2.2.3"
