@@ -17,3 +17,4 @@ test:
 production:
   database: db/production.sqlite3
   encoding: unicode
+  adapter: sqlite3
