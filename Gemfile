@@ -31,6 +31,7 @@ gem 'devise'
 gem 'bundler', '1.15.4'
 gem 'therubyracer', :platform => :ruby
 gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"
+gem 'json', github: 'flori/json', branch: 'v1.8'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

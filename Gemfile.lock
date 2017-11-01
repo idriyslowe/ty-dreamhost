@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/flori/json.git
+  revision: 7f4cfd853f2c919d854fb95548a19980feff17e8
+  branch: v1.8
+  specs:
+    json (1.8.6)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -87,7 +94,6 @@ GEM
       thor (>= 0.14, < 2.0)
     jquery-ui-rails (5.0.5)
       railties (>= 3.2.16)
-    json (1.8.3)
     kaminari (1.0.1)
       activesupport (>= 4.1.0)
       kaminari-actionview (= 1.0.1)
@@ -101,7 +107,6 @@ GEM
       kaminari-core (= 1.0.1)
     kaminari-core (1.0.1)
     libv8 (3.16.14.15)
-    libv8 (3.16.14.15-x86_64-darwin-14)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.4)
@@ -233,6 +238,7 @@ DEPENDENCIES
   devise
   jbuilder (~> 2.0)
   jquery-rails
+  json!
   passenger (>= 5.0.25)
   rails (= 4.2.4)
   rails_admin (~> 1.2)
