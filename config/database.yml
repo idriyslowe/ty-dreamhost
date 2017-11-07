@@ -18,3 +18,8 @@ production:
   database: db/production.sqlite3
   encoding: unicode
   adapter: sqlite3
+  pool: 5
+  timeout: 5000
+  username: idriysthekiller
+  password: ShGtz8*K
+  host: tyrellcannon.com

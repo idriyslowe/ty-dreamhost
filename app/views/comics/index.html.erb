@@ -3,7 +3,7 @@
     <% @comics.each do |series| %>
       <div class="comics-well col-lg-6">
         <%= link_to "/comics/#{series.id}" do %>
-            <%= image_tag( "#{series.series_image}" ) %>
+          <%= image_tag( series.series_image ) %>
         <% end %>
       </div>
     <% end %>

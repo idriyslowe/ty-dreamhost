@@ -3,6 +3,8 @@ class ComicsController < ApplicationController
 
   def index
     @comics = Comic.all
+Rails.logger.info "Year: #{Time.now.year}"
+Rails.logger.info "#{Rails.env}"
   end
 
   def show
