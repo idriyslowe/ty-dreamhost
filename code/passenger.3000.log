@@ -1,0 +1,6 @@
+2017/11/01 20:43:27 [emerg] 9179#0: bind() to 0.0.0.0:3000 failed (98: Address already in use)
+2017/11/01 20:43:27 [emerg] 9179#0: bind() to 0.0.0.0:3000 failed (98: Address already in use)
+2017/11/01 20:43:27 [emerg] 9179#0: bind() to 0.0.0.0:3000 failed (98: Address already in use)
+2017/11/01 20:43:27 [emerg] 9179#0: bind() to 0.0.0.0:3000 failed (98: Address already in use)
+2017/11/01 20:43:27 [emerg] 9179#0: bind() to 0.0.0.0:3000 failed (98: Address already in use)
+2017/11/01 20:43:27 [emerg] 9179#0: still could not bind()

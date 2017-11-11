@@ -1,0 +1,16 @@
+/home/idriysthekiller/.rvm/rubies/ruby-2.1.2/bin/ruby extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.so
+
+make "DESTDIR=" install
+/usr/bin/install -m 0755 byebug.so ./.gem.20171031-29749-tsln58/byebug
+installing default byebug libraries
