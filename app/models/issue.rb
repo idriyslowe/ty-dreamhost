@@ -24,4 +24,8 @@ class Issue < ActiveRecord::Base
   def overlay_text
     "#{title}\n#{year}\n#{details}\n$#{price}\nClick For Preview"
   end
+  # <!-- if issue is wider than others, take the whole column -->
+  # def bootstrap_grid_size
+  #   cover_image.
+  # end
 end

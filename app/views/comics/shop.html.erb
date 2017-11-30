@@ -7,13 +7,13 @@
         <hr>
         <div class="row">
         <% series.issues.for_sale.each do |issue| %>
-            <div class="comics-well col-md-6 col-sm-12 col-xs-12">
-              <%= link_to "/issues/#{issue.id}" do %>
-                <%= simple_format(issue.interpret_shop_overlay_text, :class => "click-for-issue-details" ) %>
-                <%= image_tag( "#{issue.cover_image.uploaded_image}") %>
-              <% end %>
-              <%= issue.paypal_link.html_safe %>
-            </div>
+          <div class="comics-well + #{issue.bootstrap_grid_size}" >
+            <%= link_to "/issues/#{issue.id}" do %>
+              <%= simple_format(issue.interpret_shop_overlay_text, :class => "click-for-issue-details" ) %>
+              <%= image_tag( "#{issue.cover_image.uploaded_image}") %>
+            <% end %>
+            <%= issue.paypal_link.html_safe %>
+          </div>
         <% end %>
         </div>
       <% end %>
@@ -29,7 +29,6 @@
           <div class="comics-well shop col-md-6 col-sm-12 col-xs-12">
             <%= simple_format(print.interpret_shop_overlay_text, :class => "click-for-print-details" ) %>
             <%= image_tag( "#{print.image}", :class => 'shop-image') %>
-              <!-- INSERT GENERATED BUTTON HTML HERE -->
             <%= print.paypal_link.html_safe %>
           </div>
       <% end %>

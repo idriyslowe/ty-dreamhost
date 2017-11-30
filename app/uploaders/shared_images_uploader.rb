@@ -7,12 +7,18 @@ class SharedImagesUploader < CarrierWave::Uploader::Base
   # Choose what kind of storage to use for this uploader:
   storage :file
   # storage :fog
-
+  process :store_dimensions
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
     "uploads/issues"
     # "#{model.imageable.class.to_s}/#{model.imageable.id}/#{model.class.to_s}/#{model.id}"
+  end
+
+  def store_dimensions
+    if file && model
+      model.width, model.height = ::MiniMagick::Image.open(file.file)[:dimensions]
+    end
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
