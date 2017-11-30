@@ -13,4 +13,12 @@ class Print < ActiveRecord::Base
   def overlay_text
     "#{title}\n#{details}\n$#{price}\n"
   end
+
+  def bootstrap_grid_size
+    if img_width.to_i > 715
+      "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+    else
+      "col-lg-6 col-md-6 col-sm-12 col-xs-12"
+    end
+  end
 end

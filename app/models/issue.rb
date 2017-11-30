@@ -25,7 +25,7 @@ class Issue < ActiveRecord::Base
     "#{title}\n#{year}\n#{details}\n$#{price}\nClick For Preview"
   end
   # <!-- if issue is wider than others, take the whole column -->
-  # def bootstrap_grid_size
-  #   cover_image.
-  # end
+  def bootstrap_grid_size
+    "col-lg-6 col-md-6 col-sm-12 col-xs-12"
+  end
 end

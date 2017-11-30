@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(version: 20171130034608) do
     t.string   "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "img_height"
+    t.string   "img_width"
   end
 
   create_table "authors", force: :cascade do |t|
@@ -45,6 +47,8 @@ ActiveRecord::Schema.define(version: 20171130034608) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.string   "description"
+    t.string   "img_width"
+    t.string   "img_height"
   end
 
   create_table "images", force: :cascade do |t|
@@ -55,8 +59,8 @@ ActiveRecord::Schema.define(version: 20171130034608) do
     t.string   "uploaded_image"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
-    t.string   "width"
-    t.string   "height"
+    t.string   "img_width"
+    t.string   "img_height"
   end
 
   create_table "issues", force: :cascade do |t|
@@ -81,6 +85,8 @@ ActiveRecord::Schema.define(version: 20171130034608) do
     t.string   "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "img_height"
+    t.string   "img_width"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -89,6 +95,8 @@ ActiveRecord::Schema.define(version: 20171130034608) do
     t.string   "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "img_width"
+    t.string   "img_height"
   end
 
   create_table "prints", force: :cascade do |t|
@@ -100,6 +108,8 @@ ActiveRecord::Schema.define(version: 20171130034608) do
     t.boolean  "in_store",    default: true
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
+    t.string   "img_height"
+    t.string   "img_width"
   end
 
 end

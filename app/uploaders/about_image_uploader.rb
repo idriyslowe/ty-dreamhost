@@ -6,6 +6,7 @@ class AboutImageUploader < CarrierWave::Uploader::Base
   # Choose what kind of storage to use for this uploader:
   storage :file
   # storage :fog
+  process :store_dimensions
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
@@ -13,6 +14,11 @@ class AboutImageUploader < CarrierWave::Uploader::Base
     "uploads/about"
   end
 
+  def store_dimensions
+    if file && model
+      model.img_width, model.img_height = ::MiniMagick::Image.open(file.file)[:dimensions]
+    end
+  end
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url
   #   # For Rails 3.1+ asset pipeline compatibility:

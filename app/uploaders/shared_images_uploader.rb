@@ -2,7 +2,7 @@ class SharedImagesUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
-  # include CarrierWave::MiniMagick
+  include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
   storage :file
@@ -17,7 +17,7 @@ class SharedImagesUploader < CarrierWave::Uploader::Base
 
   def store_dimensions
     if file && model
-      model.width, model.height = ::MiniMagick::Image.open(file.file)[:dimensions]
+      model.img_width, model.img_height = ::MiniMagick::Image.open(file.file)[:dimensions]
     end
   end
 
