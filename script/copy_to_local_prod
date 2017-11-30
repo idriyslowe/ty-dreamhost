@@ -1,0 +1,5 @@
+{
+  ssh -C ty_dreamhost "pg_dump --clean --no-owner db/production.sqlite3";
+  cat <<-END
+END
+} | psql db/development.sqlite3
