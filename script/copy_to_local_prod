@@ -1,5 +1,5 @@
 {
-  ssh -C ty_dreamhost "pg_dump --clean --no-owner db/production.sqlite3";
+  ssh -C idriysthekiller@64.90.48.184 "insert into main.table_one_name select * from db2.table_one_name ;"
   cat <<-END
 END
-} | psql db/development.sqlite3
+} | sqlite3 db/development.sqlite3

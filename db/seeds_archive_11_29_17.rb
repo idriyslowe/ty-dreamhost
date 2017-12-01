@@ -17,12 +17,10 @@ Post.create!([
     text: "Come visit me at the [**Chicago Comics & Entertainment Expo**](http://www.c2e2.com/) this weekend, April 21st-23rd at Chicago’s McCormick Place.  You’ll find me at table **E-15**, with the incomparable [**Landis Blair**](http://www.landisblair.com/).  I’ll have lots of new stuff, including my 2016-17 sketchbook Muscle, Metal, Ink; the new risograph edition of Weed Priests; and my DOOM carnage 11”x17” prints!  Of course I’ll have Victus, Simon, Gary, and Speculative Relationships as well.  Hope to see you there!
 You’ll also notice that you are now looking at a spiffy new website, designed by my pal Idriys Lowe.  Idriys did some great work on the site and I encourage you to look around and see the changes.  **The Shop** is also up to date with new products, so go check it out!",
     image: Pathname.new('public/uploads/posts/first_post.jpg').open
-  },
-  {
-    heading: "NEW PRINTS FOR SALE",
-    text: "Hey all, I'm happy to announce my first collection of screenprints.  I have 4 different prints available, in very limited quantities.  They are all hand numbered and signed.  I'm really excited about these images and hope to do more prints in the future.  Stay tuned for more info.",
-    image: Pathname.new("public/uploads/portfolio/SPTFE.jpg").open
   }
+  # {heading: "This is the second one...", text: "\r\nA horizontal rule follows.\r\n\r\n***\r\n\r\nHere's a definition list:\r\n\r\napples\r\n  : Good for making applesauce.\r\noranges\r\n  : Citrus!\r\ntomatoes\r\n  : There's no \"e\" in tomatoe.\r\n\r\nAgain, text is indented 4 spaces. (Put a blank line between each\r\nterm/definition pair to spread things out more.)\r\n\r\nHere's a \"line block\":\r\n\r\n| Line one\r\n|   Line too\r\n| Line tree\r\n\r\nand images can be specified like so:\r\n\r\n![example image](/assets/ty-home-image.jpg \"An exemplary image\")",
+  #   image: Pathname.new(files.sample).open
+  # }
 ])
 
 # *---------------------------
@@ -694,40 +692,9 @@ Print.create!([
 <img alt=\"\" border=\"0\" src=\"https://www.paypalobjects.com/en_US/i/scr/pixel.gif\" width=\"1\" height=\"1\">
 </form>",
     image: Pathname.new("public/uploads/portfolio/5-DOOM.jpg").open
-  },
-  {
-    title: "Priest No.1",
-    price: "20.00",
-    details: "Screen print, 8.5\"x11\"",
-    paypal_link: "<form target=\"paypal\" action=\"https://www.paypal.com/cgi-bin/webscr\" method=\"post\"> <input type=\"hidden\" name=\"cmd\" value=\"_s-xclick\"> <input type=\"hidden\" name=\"hosted_button_id\" value=\"LU7HCKRE54RVQ\"> <input type=\"image\" src=\"https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif\" border=\"0\" name=\"submit\" alt=\"PayPal - The safer, easier way to pay online!\"> <img alt=\"\" border=\"0\" src=\"https://www.paypalobjects.com/en_US/i/scr/pixel.gif\" width=\"1\" height=\"1\"> </form>",
-    image: Pathname.new("public/uploads/portfolio/Priest-BW.jpg").open,
-    in_store: true
-  },
-  {
-    title: "Dethbrace",
-    price: "30.00",
-    details: "Screen print, 8.5\"x11\"",
-    paypal_link: "<form target=\"paypal\" action=\"https://www.paypal.com/cgi-bin/webscr\" method=\"post\"> <input type=\"hidden\" name=\"cmd\" value=\"_s-xclick\"> <input type=\"hidden\" name=\"hosted_button_id\" value=\"HJX2Q6J4QQXP8\"> <input type=\"image\" src=\"https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif\" border=\"0\" name=\"submit\" alt=\"PayPal - The safer, easier way to pay online!\"> <img alt=\"\" border=\"0\" src=\"https://www.paypalobjects.com/en_US/i/scr/pixel.gif\" width=\"1\" height=\"1\"> </form>",
-    image: Pathname.new("public/uploads/portfolio/Dethbrace.jpg").open,
-    in_store: true
-  },
-  {
-    title: "Space Drugs",
-    price: "30.00",
-    details: "Screen print, 8.5\"x11\"",
-    paypal_link: "<form target=\"paypal\" action=\"https://www.paypal.com/cgi-bin/webscr\" method=\"post\"> <input type=\"hidden\" name=\"cmd\" value=\"_s-xclick\"> <input type=\"hidden\" name=\"hosted_button_id\" value=\"SWYDJMCJ8U8BA\"> <input type=\"image\" src=\"https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif\" border=\"0\" name=\"submit\" alt=\"PayPal - The safer, easier way to pay online!\"> <img alt=\"\" border=\"0\" src=\"https://www.paypalobjects.com/en_US/i/scr/pixel.gif\" width=\"1\" height=\"1\"> </form>",
-    image: Pathname.new("public/uploads/portfolio/Space_Drugs.jpg").open,
-    in_store: true
-  },
-  {
-    title: "SPTFE",
-    price: "30.00",
-    details: "Screen print, 8.5\"x11\"",
-    paypal_link: "<form target=\"paypal\" action=\"https://www.paypal.c...",
-    image: Pathname.new("public/uploads/portfolio/SPTFE.jpg").open,
-    in_store: true
   }
 ])
+
 # *---------------------------
 #   ABOUT ME!
 # *---------------------------
