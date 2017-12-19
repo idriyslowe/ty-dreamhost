@@ -7,6 +7,10 @@ class Comic < ActiveRecord::Base
 
   mount_uploader :series_image, SeriesImageUploader
 
+  def issues_for_sale
+    issues.where(in_store: true)
+  end
+
   def self.issues_for_sale
     self.joins("INNER JOIN issues ON issues.in_store = 't'").distinct
   end

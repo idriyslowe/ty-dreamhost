@@ -10,7 +10,7 @@
           <div class="comics-well <%= issue.bootstrap_grid_size %>" >
             <%= link_to "/issues/#{issue.id}" do %>
               <%= simple_format(issue.interpret_shop_overlay_text, :class => "click-for-issue-details" ) %>
-              <%= image_tag( "#{issue.cover_image.uploaded_image}") %>
+              <%= image_tag(issue.cover_image.uploaded_image) %>
             <% end %>
             <%= issue.paypal_link.html_safe %>
           </div>
@@ -28,7 +28,7 @@
       <% @prints.for_sale.each do |print| %>
           <div class="comics-well <%= print.bootstrap_grid_size %>">
             <%= simple_format(print.interpret_shop_overlay_text, :class => "click-for-print-details" ) %>
-            <%= image_tag( "#{print.image}", :class => 'shop-image') %>
+            <%= image_tag(print.image) %>
             <%= print.paypal_link.html_safe %>
           </div>
       <% end %>
