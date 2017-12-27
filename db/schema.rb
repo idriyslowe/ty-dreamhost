@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171130034608) do
+ActiveRecord::Schema.define(version: 20171227193105) do
 
   create_table "abouts", force: :cascade do |t|
     t.string   "text"
@@ -44,11 +44,12 @@ ActiveRecord::Schema.define(version: 20171130034608) do
   create_table "comics", force: :cascade do |t|
     t.string   "name"
     t.string   "series_image"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
     t.string   "description"
     t.string   "img_width"
     t.string   "img_height"
+    t.integer  "position",     default: 1
   end
 
   create_table "images", force: :cascade do |t|
@@ -72,10 +73,12 @@ ActiveRecord::Schema.define(version: 20171130034608) do
     t.string   "details"
     t.string   "price"
     t.boolean  "in_store",    default: true
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.string   "subtitle"
     t.string   "issue_type"
+    t.boolean  "new",         default: false
+    t.integer  "position",    default: 1
   end
 
   create_table "portfolio_items", force: :cascade do |t|
@@ -83,10 +86,11 @@ ActiveRecord::Schema.define(version: 20171130034608) do
     t.string   "details"
     t.string   "year"
     t.string   "image"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
     t.string   "img_height"
     t.string   "img_width"
+    t.integer  "position",   default: 1
   end
 
   create_table "posts", force: :cascade do |t|
@@ -106,10 +110,12 @@ ActiveRecord::Schema.define(version: 20171130034608) do
     t.string   "paypal_link"
     t.string   "image"
     t.boolean  "in_store",    default: true
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.string   "img_height"
     t.string   "img_width"
+    t.boolean  "new",         default: false
+    t.integer  "position",    default: 1
   end
 
 end

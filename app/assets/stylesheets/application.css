@@ -256,15 +256,6 @@ image {
   height: 83%;
 }
 
-/* was centering comics but screwing up prints wont work for both at once */
-
-/* .comics-well:nth-last-child(1):nth-child(odd) {
-  display:inline-block;
-  padding-left: 30%;
-  padding-right: 30%;
-  width: 100%;
-} */
-
 .comics-well:nth-last-child(1):nth-child(odd):hover .click-for-preview {
   visibility: visible;
 }

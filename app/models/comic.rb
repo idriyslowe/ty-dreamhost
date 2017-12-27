@@ -26,7 +26,7 @@ class Comic < ActiveRecord::Base
   def series_image_name
     series_image.file.path.split('/').last
   end
-# this is per comic. i need to find the last one and make it 12
+
   def bootstrap_grid_size
     if Comic.count.odd? && Comic.last == self
       "col-lg-12 col-md-12 col-sm-12 col-xs-12"
