@@ -1,7 +1,7 @@
 <section class="main-section container-fluid">
   <div class="comics-index-span row text-center">
     <% @comics.each do |series| %>
-      <div class="comics-well col-lg-6">
+      <div class="comics-well <%= series.bootstrap_grid_size %>">
         <%= link_to "/comics/#{series.id}" do %>
           <%= image_tag( series.series_image ) %>
         <% end %>

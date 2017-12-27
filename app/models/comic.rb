@@ -8,7 +8,7 @@ class Comic < ActiveRecord::Base
   mount_uploader :series_image, SeriesImageUploader
 
   def issues_for_sale
-    issues.where(in_store: true)
+    issues.where(in_store: true).distinct
   end
 
   def self.issues_for_sale
@@ -19,7 +19,20 @@ class Comic < ActiveRecord::Base
     name.upcase
   end
 
+  def series_image_display
+    series_image || issues.last.try(:cover_image)
+  end
+  
   def series_image_name
     series_image.file.path.split('/').last
   end
+
+  def bootstrap_grid_size
+    count = 1
+    if count == 1 || count.odd?
+      "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+    else
+      "col-lg-6 col-md-6 col-sm-12 col-xs-12"
+    end
+  end  
 end
