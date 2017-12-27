@@ -1,5 +1,8 @@
 class Print < ActiveRecord::Base
   require 'carrierwave/orm/activerecord'
+
+  scope :by_position, -> { order(position: :asc) }
+
   mount_uploader :image, PrintImageUploader
 
   def self.for_sale

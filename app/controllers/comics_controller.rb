@@ -3,15 +3,14 @@ class ComicsController < ApplicationController
 
   def index
     @comics = Comic.all
-Rails.logger.info "Year: #{Time.now.year}"
-Rails.logger.info "#{Rails.env}"
   end
 
   def show
     @comic = Comic.find params[:id]
     @header_image = @comic.series_image
   end
-
+        # each series has a position.
+        #  each series has a position.
   def shop
     @comics = Comic.all
     @prints = Print.all

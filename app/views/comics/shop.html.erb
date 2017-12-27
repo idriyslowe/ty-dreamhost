@@ -1,12 +1,13 @@
 <section class="main-section container-fluid">
+
   <h1>COMICS</h1>
   <div class="comics-shop-span row">
-    <% @comics.each do |series| %>
+    <% @comics.by_position.each do |series| %>
       <% if series.issues.for_sale.any? %>
         <h4><%= series.name %></h4>
         <hr>
         <div class="row">
-        <% series.issues.for_sale.each do |issue| %>
+        <% series.issues.for_sale.by_position.each do |issue| %>
           <div class="comics-well <%= issue.bootstrap_grid_size %>" >
             <%= link_to "/issues/#{issue.id}" do %>
               <%= simple_format(issue.interpret_shop_overlay_text, :class => "click-for-issue-details" ) %>
@@ -19,13 +20,14 @@
       <% end %>
     <% end %>
   </div>
+
   <div class="clearfix visible-lg-block"></div>
+
   <h1>PRINTS</h1>
   <hr>
-
   <div class="comics-shop-span row">
     <div class="row">
-      <% @prints.for_sale.each do |print| %>
+      <% @prints.for_sale.by_position.each do |print| %>
           <div class="comics-well <%= print.bootstrap_grid_size %>">
             <%= simple_format(print.interpret_shop_overlay_text, :class => "click-for-print-details" ) %>
             <%= image_tag(print.image) %>

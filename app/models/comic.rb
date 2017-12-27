@@ -4,6 +4,8 @@ class Comic < ActiveRecord::Base
   has_many :issues, inverse_of: :comic, dependent: :destroy
 
   validates_presence_of :name
+  
+  scope :by_position, -> { order(position: :asc) }
 
   mount_uploader :series_image, SeriesImageUploader
 
